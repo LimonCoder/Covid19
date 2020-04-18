@@ -41,16 +41,16 @@
         <div class="row">
 
                         <div class="container">
-                            <h1 class="mt-4">Dashboard</h1>
+                            <marquee class="mt-4">Dashboard</marquee>
                             <ol class="breadcrumb mb-4">
-                                <li class="breadcrumb-item active">Total Records :</li>
+                                <li class="breadcrumb-item active">মোট ফলাফল :</li>
                             </ol>
                             <div class="row">
                                 <div class="col-xl-4 col-md-6">
                                     <div class="card bg-primary text-white mb-4">
                                         <div class="card-body"><h2 id="totalConfrimed"></h2></div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <div class="small text-white"><h5>Total Confrimed</h5></div>
+                                            <div class="small text-white"><h5>মোট আক্রান্ত</h5></div>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                     <div class="card bg-warning text-white mb-4">
                                         <div class="card-body"><h2 id="totalRecovered"></h2></div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <div class="small text-white"><h5>Total Recovered</h5></div>
+                                            <div class="small text-white"><h5>মোট সুস্থ</h5></div>
                                         </div>
                                     </div>
                                 </div>
@@ -66,21 +66,21 @@
                                     <div class="card bg-success text-white mb-4">
                                         <div class="card-body"><h2 id="totaldeaths"></h2></div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <div class="small text-white"><h5>Total Deaths</h5></div>
+                                            <div class="small text-white"><h5>মোট মৃ্ত্যু</h5></div>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
                             <ol class="breadcrumb mb-4">
-                                <li class="breadcrumb-item active">Today Records : </li>
+                                <li class="breadcrumb-item active"> আজকের ফলাফল : </li>
                             </ol>
                             <div class="row">
                                 <div class="col-xl-4 col-md-6">
                                     <div class="card bg-danger text-white mb-4">
                                         <div class="card-body"><h2 id="Confrimed"></h2></div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <div class="small text-white"><h5>Confrimed</h5></div>
+                                            <div class="small text-white"><h5>আক্রান্ত</h5></div>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                                     <div class="card bg-secondary text-white mb-4">
                                         <div class="card-body"><h2 id="Recovered"></h2></div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <div class="small text-white"><h5> Recovered</h5></div>
+                                            <div class="small text-white"><h5> সুস্থ</h5></div>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                                     <div class="card bg-dark text-white mb-4">
                                         <div class="card-body"><h2 id="deaths"></h2></div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <div class="small text-white"><h5> Deaths</h5></div>
+                                            <div class="small text-white"><h5> মৃ্ত্যু</h5></div>
                                         </div>
                                     </div>
                                 </div>
@@ -106,29 +106,29 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="card mb-4">
-                                        <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Gender</div>
-                                        <div class="card-body"><div id="piechart" ></div></div>
+                                        <div class="card-header"><i class="fas fa-chart-area mr-1"></i>লিঙ্গ :</div>
+                                        <div class="card-body"><div id="piechart" width="100%" height="60" ></div></div>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="card mb-4">
-                                        <div class="card-header"><i class="fas fa-chart-bar mr-1"></i>Bar Chart Example</div>
+                                        <div class="card-header"><i class="fas fa-chart-bar mr-1"></i>বয়সের অনুপাত :</div>
                                         <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card mb-4">
-                                <div class="card-header"><i class="fas fa-table mr-1"></i>District Records :</div>
+                                <div class="card-header"><i class="fas fa-table mr-1"></i> জেলাভিত্তিক ফলাফল :</div>
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
-                                                <th>District</th>
-                                                <th>confirmed</th>
-                                                <th>recovered</th>
-                                                <th>deathse</th>
+                                                <th>জেলার নাম :</th>
+                                                <th>আক্রান্ত</th>
+                                                <th>সুস্থ</th>
+                                                <th>মৃ্ত্যু</th>
                                             </tr>
                                             </thead>
                                             <tbody id="districttotal">
@@ -182,35 +182,35 @@ $(document).ready(function () {
     function drawChart() {
 
 
-        // $.ajax({
-        //     url: 'https://www.fastaar.com/api',
-        //     type: 'get',
-        //     dataType: 'json',
-        //     cache: 'false',
-        //     success: function (res) {
-        //
-        //             $(res.genders).each(function (index, value) {
-        //
-        //             })
-        //
-        //
-        //     }
-        //
-        // });
+        $.ajax({
+            url: 'https://www.fastaar.com/api',
+            type: 'get',
+            dataType: 'json',
+            cache: 'false',
+            success: function (res) {
 
-        var data = google.visualization.arrayToDataTable([
-            ['Gender', 'Number'],
-            ['Male', 200],
-            ['Famle', 300]
 
-        ]);
 
-        var options = {
-            title: 'My Daily Activities'
-        };
+                var data = google.visualization.arrayToDataTable([
+                    ['Gender', 'Number'],
+                    ['ছেলে', parseInt(res.genders.male)],
+                    ['মেয়ে', parseInt(res.genders.female)]
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, options);
+                ]);
+
+                var options = {
+                    title: 'ছেলে মেয়ে উভয় আক্রান্ত'
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                chart.draw(data, options);
+
+
+            }
+
+        });
+
+
 
 
 
