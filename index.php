@@ -209,13 +209,13 @@ $(document).ready(function () {
             success: function (res) {
                 var data = google.visualization.arrayToDataTable([
                     ['Gender', 'Number'],
-                    ['ছেলে', parseInt(res.genders.male)],
-                    ['মেয়ে', parseInt(res.genders.female)]
+                    ['পুরুষ', parseInt(res.genders.male)],
+                    ['মহিলা', parseInt(res.genders.female)]
 
                 ]);
 
                 var options = {
-                    title: 'ছেলে মেয়ে উভয় আক্রান্ত'
+                    title: 'পুরুষ মহিলা উভয় আক্রান্ত'
                 };
 
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
