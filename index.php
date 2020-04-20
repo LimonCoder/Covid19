@@ -7,33 +7,26 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Corona Live BD</title>
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    
+    <link href="assets/css/styles-covid.css" rel="stylesheet" />
+    
+    <link href="assets/css/custom-covid.css" rel="stylesheet" />
+    
+    <link href="assets/css/jquery.dataTables.min.js" rel="stylesheet" crossorigin="anonymous" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     
 </head>
 <body class="sb-nav-fixed">
-<nav class="navbar navbar-expand-lg navbar-light bg-success sticky-top" style="color: white">
-    <a class="navbar-brand" href="#">Corona BD LIVE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success sticky-top" style="color: white">
+    
+    <div class="col">
+        <img src="assets/img/Innovationit-logo.png" class="img-fluid img-responsive" sizes="(max-width: 200px) 100vw, 800px" />
+    </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://www.fastaar.com/api" target="_self">API</a>
-            </li>
-
-
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-danger my-2 my-sm-0" type="submit">Login</button>
-        </form>
+    <div class="col">
+        <h5>Corona BD LIVE </h5>
     </div>
 </nav>
 
@@ -41,7 +34,11 @@
         <div class="row">
 
                         <div class="container">
+
                             <ol class="breadcrumb mb-4 mt-1">
+
+                            <ol class="breadcrumb mb-4">
+
                                 <li class="breadcrumb-item active">মোট ফলাফল :</li>
                             </ol>
                             <div class="row">
@@ -125,9 +122,8 @@
                                             <thead>
                                             <tr>
                                                 <th>জেলার নাম :</th>
-                                                <th>আক্রান্ত</th>
-                                                <th>সুস্থ</th>
-                                                <th>মৃ্ত্যু</th>
+                                                <th>মোট আক্রান্ত</th>
+                                                
                                             </tr>
                                             </thead>
                                             <tbody id="districttotal">
@@ -141,15 +137,20 @@
 
                                     </div>
                                 </div>
+
                                 <footer class="py-4 bg-light mt-auto">
                                     <div class="container-fluid">
                                         <div class="d-flex align-items-center justify-content-between small">
+
                                             <div class="text-muted">Devoloped By <a href="https://web.facebook.com/Limon369949/" target="_blank">Nurul Amin Limon</a></div>
                                             <div class="text-muted">Last Upadate : <span id="lastupdate"></span> </div>
+
+                                            <!-- <div class="text-muted">Devoloped By <a href="https://web.facebook.com/Limon369949/" target="_blank">Nurul Amin Limon</a></div> -->
+
                                             <div>
                                                 <span>Technical Support :</span>
 
-                                                <a href="#">InnovationIT</a>
+                                                <a href="http://innovationit.com.bd" target="_blank">Innovation IT</a>
                                             </div>
                                         </div>
                                     </div>
@@ -167,15 +168,30 @@
 
 
 
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+=======
+<script src="assets/js/jquery-3.3.1.js" crossorigin="anonymous"></script>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
+
+<script src="assets/js/scripts-covid.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+
 <script src="assets/demo/chart-area-demo.js"></script>
+
 <script src="assets/demo/chart-bar-demo.js"></script>
+
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
 <script src="assets/demo/datatables-demo.js"></script>
+
+
+<script src="assets/js/datatable.min.js" crossorigin="anonymous"></script>
+
+<script src="assets/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
@@ -188,30 +204,26 @@ $(document).ready(function () {
     google.charts.setOnLoadCallback(drawChart);
 
     function drawChart() {
-
-
         $.ajax({
             url: 'https://www.fastaar.com/api',
             type: 'get',
             dataType: 'json',
             cache: 'false',
             success: function (res) {
-
-
-
                 var data = google.visualization.arrayToDataTable([
                     ['Gender', 'Number'],
-                    ['ছেলে', parseInt(res.genders.male)],
-                    ['মেয়ে', parseInt(res.genders.female)]
+                    ['পুরুষ', parseInt(res.genders.male)],
+                    ['মহিলা', parseInt(res.genders.female)]
 
                 ]);
 
                 var options = {
-                    title: 'ছেলে মেয়ে উভয় আক্রান্ত'
+                    title: 'পুরুষ মহিলা উভয় আক্রান্ত'
                 };
 
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
                 chart.draw(data, options);
+
 
 
             }
@@ -249,27 +261,61 @@ $(document).ready(function () {
                      $("#totalRecovered").html(value.recovered);
                      $("#totaldeaths").html(value.deaths);
 
-                })
+                });
+
                 $(res.today).each(function(index,value){
                     $("#Confrimed").html(value.todayConfirmed);
                     $("#Recovered").html(value.todayRecovered);
                     $("#deaths").html(value.todayDeaths);
 
-                })
+                });
+
+                var totaldis = "";
 
                 $(res.districts).each(function(index,value){
                     totaldis += '<tr>';
                     totaldis += '<td>'+value.bnname+'</td>';
                     totaldis += '<td>'+value.confirmed+'</td>';
-                    totaldis += '<td>'+value.recovered+'</td>';
-                    totaldis += '<td>'+value.deaths+'</td>';
                     totaldis += '</tr>';
-                })
+                });
 
 
                 $("#districttotal").html( totaldis);
+
+                $("#datatable").DataTable();
+
             }
-        })
+
+        });
+    }
+});
+
+    $(document).ready(function(){
+
+        var totaldis = "";
+
+        // $.ajax({
+        //     url:'https://www.fastaar.com/api',
+        //     type:'get',
+        //     dataType:'json',
+        //     cache:'false',
+        //     success:function(res){
+                
+
+        //         $(res.districts).each(function(index,value){
+        //             totaldis += '<tr>';
+        //             totaldis += '<td>'+value.name+'</td>';
+        //             totaldis += '<td>'+value.confirmed+'</td>';
+        //             totaldis += '<td>'+value.recovered+'</td>';
+        //             totaldis += '<td>'+value.deaths+'</td>';
+        //             totaldis += '</tr>';
+        //         })
+
+
+        //         $("#districttotal").html( totaldis);
+        //     }
+        // })
 
     });
+
 </script>
