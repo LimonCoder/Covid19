@@ -41,8 +41,7 @@
         <div class="row">
 
                         <div class="container">
-                            <marquee class="mt-4">Dashboard</marquee>
-                            <ol class="breadcrumb mb-4">
+                            <ol class="breadcrumb mb-4 mt-1">
                                 <li class="breadcrumb-item active">মোট ফলাফল :</li>
                             </ol>
                             <div class="row">
@@ -135,13 +134,18 @@
 
 
                                             </tbody>
+
+
+
                                         </table>
+
                                     </div>
                                 </div>
                                 <footer class="py-4 bg-light mt-auto">
                                     <div class="container-fluid">
                                         <div class="d-flex align-items-center justify-content-between small">
                                             <div class="text-muted">Devoloped By <a href="https://web.facebook.com/Limon369949/" target="_blank">Nurul Amin Limon</a></div>
+                                            <div class="text-muted">Last Upadate : <span id="lastupdate"></span> </div>
                                             <div>
                                                 <span>Technical Support :</span>
 
@@ -158,7 +162,10 @@
 
 
 
+
     </div>
+
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -166,9 +173,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 <script src="assets/demo/chart-area-demo.js"></script>
 <script src="assets/demo/chart-bar-demo.js"></script>
-<script src="datatable.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
 <script src="assets/demo/datatables-demo.js"></script>
+
 </body>
 </html>
 
@@ -233,6 +241,9 @@ $(document).ready(function () {
             dataType:'json',
             cache:'false',
             success:function(res){
+
+                $("#lastupdate").html(res.lastUpdate);
+
                 $(res.total).each(function(index,value){
                      $("#totalConfrimed").html(value.confirmed);
                      $("#totalRecovered").html(value.recovered);
@@ -248,7 +259,7 @@ $(document).ready(function () {
 
                 $(res.districts).each(function(index,value){
                     totaldis += '<tr>';
-                    totaldis += '<td>'+value.name+'</td>';
+                    totaldis += '<td>'+value.bnname+'</td>';
                     totaldis += '<td>'+value.confirmed+'</td>';
                     totaldis += '<td>'+value.recovered+'</td>';
                     totaldis += '<td>'+value.deaths+'</td>';

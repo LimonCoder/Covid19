@@ -1,6 +1,4 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
-  $('#dataTable').DataTable({
-    "pageLength": 10
-  });
+  $('#dataTable').DataTable();
 });
