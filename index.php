@@ -26,7 +26,7 @@
     </div>
 
     <div class="col">
-        <h5>Corona BD LIVE Update</h5>
+        <h5>Corona BD LIVE </h5>
     </div>
 </nav>
 
@@ -118,9 +118,8 @@
                                             <thead>
                                             <tr>
                                                 <th>জেলার নাম :</th>
-                                                <th>আক্রান্ত</th>
-                                                <th>সুস্থ</th>
-                                                <th>মৃ্ত্যু</th>
+                                                <th>মোট আক্রান্ত</th>
+                                                
                                             </tr>
                                             </thead>
                                             <tbody id="districttotal">
@@ -220,8 +219,6 @@ $(document).ready(function () {
                     totaldis += '<tr>';
                     totaldis += '<td>'+value.name+'</td>';
                     totaldis += '<td>'+value.confirmed+'</td>';
-                    totaldis += '<td>'+value.recovered+'</td>';
-                    totaldis += '<td>'+value.deaths+'</td>';
                     totaldis += '</tr>';
                 });
 
