@@ -26,7 +26,7 @@
     </div>
 
     <div class="col">
-        <h5>Corona BD LIVE</h5>
+        <h5>Corona BD LIVE Update</h5>
     </div>
 </nav>
 
