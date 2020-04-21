@@ -7,12 +7,12 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>Corona Live BD</title>
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <link href="assets/css/styles-covid.css" rel="stylesheet"/>
 
     <link href="assets/css/custom-covid.css" rel="stylesheet"/>
 
-    <link href="assets/css/jquery.dataTables.min.js" rel="stylesheet" crossorigin="anonymous"/>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
             crossorigin="anonymous"></script>
@@ -55,31 +55,31 @@
             </div>
             <div class="col-md-12 clearfix p-5 " style="margin-left: 50px">
                 <div class="row justify-content-center">
-                    <div class="score col-xl-3  col-md-6" style="margin-bottom: 28px; margin-left:55px;">
+                    <div class="col-lg-3  col-md-6" style="margin-bottom: 28px; margin-left:55px;">
                         <div><h2 class="text-white " id="Confrimed" 
                                  style="font-family: SutonnyOMJ; font-size: 60px;margin-left: 60px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
-                                    style="font-family: SutonnyOMJ; font-size: 40px"
-                                    class="h4 bg-white text-danger px-4 py-2">নতুন আক্রান্ত</span>
+                                    style="font-family: SutonnyOMJ; font-size: 37px"
+                                    class="h4 bg-white text-danger px-2 py-2">নতুন আক্রান্ত</span>
                         </div>
                     </div>
-                    <div class="score col-xl-3 col-md-6" style="margin-bottom: 28px; margin-left:55px;">
+                    <div class=" col-lg-3 col-md-6" style="margin-bottom: 28px; margin-left:55px;">
                         <div><h2 class="text-white " id="Recovered" 
                                  style="font-family: SutonnyOMJ; font-size: 60px; margin-left: 60px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
                                     style="font-family: SutonnyOMJ; font-size: 40px"
-                                    class="h4 bg-white text-danger px-5 py-2">নতুন সুস্থ</span>
+                                    class="h4 bg-white text-danger px-4 py-2">নতুন সুস্থ</span>
                         </div>
                     </div>
-                    <div class="score col-xl-3 col-md-6" style="margin-bottom: 20px; margin-left:55px;">
+                    <div class=" col-lg-3 col-md-6" style="margin-bottom: 20px; margin-left:55px;">
                         <div><h2 class="text-white" id="deaths" 
                                  style="font-family: SutonnyOMJ; font-size: 60px; margin-left: 60px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
                                     style="font-family: SutonnyOMJ; font-size: 40px"
-                                    class="h4 bg-white text-danger px-5 py-2">নতুন মৃ্ত্যু</span>
+                                    class="h4 bg-white text-danger px-4 py-2">নতুন মৃ্ত্যু</span>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
             <div class="card-header"><i class="fas fa-table mr-1"></i> জেলাভিত্তিক ফলাফল :</div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                         <tr>
                             <th>জেলার নাম :</th>
@@ -152,8 +152,8 @@
 
                         </tr>
                         </thead>
-                        <tbody id="districttotal">
-
+                        <tbody>
+                        	
 
                         </tbody>
                     </table>
@@ -194,8 +194,8 @@
 <script src="assets/demo/chart-bar-demo.js"></script>
 
 <script src="assets/js/datatable.min.js" crossorigin="anonymous"></script>
-
-<script src="assets/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
 </body>
 </html>
@@ -205,17 +205,7 @@
 
     $(document).ready(function () {
 
-        google.charts.load('current', {'packages': ['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            $.ajax({
-                url: 'https://www.fastaar.com/api',
-                type: 'get',
-                dataType: 'json',
-                cache: 'false',
-                success: function (res) {
-                    var banglaDigits = {
+    	var banglaDigits = {
                         0: '০',
                         1: '১',
                         2: '২',
@@ -230,7 +220,17 @@
 
                     };
 
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
 
+        function drawChart() {
+            $.ajax({
+                url: 'https://www.fastaar.com/api',
+                type: 'get',
+                dataType: 'json',
+                cache: 'false',
+                success: function (res) {
+                   
                     var data = google.visualization.arrayToDataTable([
                         ['Gender', 'Number'],
                         ['পুরুষ', parseInt(res.genders.male)],
@@ -239,7 +239,7 @@
                     ]);
 
                     var options = {
-                        title: 'পুরুষ মহিলা উভয় আক্রান্ত'
+                        title: 'পুরুষ মহিলা গড় আক্রান্ত'
                     };
 
                     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -274,53 +274,41 @@
 
                     });
 
-                    var totaldis = "";
-
-                    $(res.districts).each(function (index, value) {
-                        totaldis += '<tr>';
-                        totaldis += '<td>' + value.name + '</td>';
-                        totaldis += '<td>' + value.confirmed + '</td>';
-                        totaldis += '</tr>';
-                    });
-
-
-                    $("#districttotal").html(totaldis);
-
-                    $("#datatable").DataTable();
+                 
 
                 }
 
             });
         }
-    });
 
-    $(document).ready(function () {
+        $.getJSON("https://www.fastaar.com/api", function(res){
+        	
+        	$.each(res.districts, function(index,value){
+        		var tr = `
+        			<tr>
+        				<td>${value.bnname}</td>
+        				<td>${(value.confirmed).toString().replace(/[0123456789]/g, function (s) {
+                            return banglaDigits[s];
+                        })}</td>
+        			</tr>
+        		`;
 
-        var totaldis = "";
-
-        // $.ajax({
-        //     url:'https://www.fastaar.com/api',
-        //     type:'get',
-        //     dataType:'json',
-        //     cache:'false',
-        //     success:function(res){
-
-
-        //         $(res.districts).each(function(index,value){
-        //             totaldis += '<tr>';
-        //             totaldis += '<td>'+value.name+'</td>';
-        //             totaldis += '<td>'+value.confirmed+'</td>';
-        //             totaldis += '<td>'+value.recovered+'</td>';
-        //             totaldis += '<td>'+value.deaths+'</td>';
-        //             totaldis += '</tr>';
-        //         })
+        		$('tbody').append(tr);
 
 
-        //         $("#districttotal").html( totaldis);
-        //     }
-        // })
+        	})
+
+        	$("#dataTable").DataTable({
+
+        	});
+        });
+
+
+
 
     });
+
+   
 
 </script>
 
