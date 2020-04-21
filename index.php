@@ -18,6 +18,7 @@
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+
 </head>
 <body class="sb-nav-fixed">
 <nav class="navbar navbar-expand-lg navbar-light bg-success sticky-top" style="color: white">
@@ -35,9 +36,9 @@
 
 <div class="row">
 
-    <div class="container">
+    <div class="container-fluid">
         <!--------------------------------------------------------- Live Secore Broad -------------------------->
-        <div class="row bg-danger m-1">
+        <div class="row m-1" style="background-color:#3867d6;">
             <div class="col-md-12 clearfix">
                 <div class="row">
                     <div class="col-sm-12 text-center  col-md-12 text-center my-2 p-2">
@@ -52,10 +53,10 @@
 
 
             </div>
-            <div class="col-md-12 clearfix p-5 justify-content-center" style="margin-left: 50px">
-                <div class="row">
-                    <div class="col-xl-4  col-md-6" style="margin-bottom: 7px">
-                        <div><h2 class="text-white " id="Confrimed"
+            <div class="col-md-12 clearfix p-5 " style="margin-left: 50px">
+                <div class="row justify-content-center">
+                    <div class="score col-xl-3  col-md-6" style="margin-bottom: 28px; margin-left:55px;">
+                        <div><h2 class="text-white " id="Confrimed" 
                                  style="font-family: SutonnyOMJ; font-size: 60px;margin-left: 60px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
@@ -63,8 +64,8 @@
                                     class="h4 bg-white text-danger px-4 py-2">নতুন আক্রান্ত</span>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6" style="margin-bottom: 7px">
-                        <div><h2 class="text-white " id="Recovered"
+                    <div class="score col-xl-3 col-md-6" style="margin-bottom: 28px; margin-left:55px;">
+                        <div><h2 class="text-white " id="Recovered" 
                                  style="font-family: SutonnyOMJ; font-size: 60px; margin-left: 60px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
@@ -72,8 +73,8 @@
                                     class="h4 bg-white text-danger px-5 py-2">নতুন সুস্থ</span>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 ">
-                        <div><h2 class="text-white" id="deaths"
+                    <div class="score col-xl-3 col-md-6" style="margin-bottom: 20px; margin-left:55px;">
+                        <div><h2 class="text-white" id="deaths" 
                                  style="font-family: SutonnyOMJ; font-size: 60px; margin-left: 60px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
@@ -88,8 +89,8 @@
                 <div class="row">
                     <div class="col-sm-12 text-center col-md-12">
                         <div class="small pt-4"><span
-                                    style="font-family: SutonnyOMJ; font-size: 20px; padding: 10px"
-                                    class="h4 bg-white text-danger">গত ২৪ ঘন্টায় নমুনা সংগ্রহ : <span
+                                    style="font-family: SutonnyOMJ; font-size: 20px; padding: 10px 60px; margin-right:30px"
+                                    class="h4 bg-white text-muted">গত ২৪ ঘন্টায় নমুনা সংগ্রহ : <span
                                         id="total">2019</span></span></div>
                     </div>
                 </div>
