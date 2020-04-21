@@ -47,9 +47,7 @@
                         <h5><span class="h4 text-white"
                                   style="font-family: SutonnyOMJ; font-size: 40px; border-bottom: 2px solid white; padding-bottom: 2px">করোনা ভাইরাস বাংলাদেশ আপডেট</span>
                         </h5>
-                        <h5><span class="text-white " style="font-size: 15px">করোনা ভাইরাস বাংলাদেশ আপডেট</span>
-                        </h5>
-                        <span></span>
+           
                     </div>
                 </div>
 
