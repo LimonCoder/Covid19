@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +31,7 @@
     </div>
 
     <div class="col">
-        <h5>Corona BD LIVE </h5>
+        <h4>Corona BD LIVE </h4>
     </div>
 </nav>
 
@@ -57,7 +59,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-3  col-md-6" style="margin-bottom: 28px; margin-left:55px;">
                         <div><h2 class="text-white " id="Confrimed" 
-                                 style="font-family: SutonnyOMJ; font-size: 60px;margin-left: 60px; line-height: 50px"></h2>
+                                 style="font-family: SutonnyOMJ; font-size: 60px;margin-left: 45px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
                                     style="font-family: SutonnyOMJ; font-size: 37px"
@@ -66,7 +68,7 @@
                     </div>
                     <div class=" col-lg-3 col-md-6" style="margin-bottom: 28px; margin-left:55px;">
                         <div><h2 class="text-white " id="Recovered" 
-                                 style="font-family: SutonnyOMJ; font-size: 60px; margin-left: 60px; line-height: 50px"></h2>
+                                 style="font-family: SutonnyOMJ; font-size: 60px; margin-left: 45px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
                                     style="font-family: SutonnyOMJ; font-size: 40px"
@@ -75,7 +77,7 @@
                     </div>
                     <div class=" col-lg-3 col-md-6" style="margin-bottom: 20px; margin-left:55px;">
                         <div><h2 class="text-white" id="deaths" 
-                                 style="font-family: SutonnyOMJ; font-size: 60px; margin-left: 60px; line-height: 50px"></h2>
+                                 style="font-family: SutonnyOMJ; font-size: 60px; margin-left: 45px; line-height: 50px"></h2>
                         </div>
                         <div class="small pt-4"><span
                                     style="font-family: SutonnyOMJ; font-size: 40px"
