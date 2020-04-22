@@ -109,7 +109,7 @@
 								<!------------------------------------------------------------ Live Secore Broad -------------------------->
 								<div class="row">
 									<!------------------------------------------------------------Start Gender wise piechart -------------------------->
-									<div class="col-xl-6">
+									<div class="genderwise col-xl-6">
 										<div class="card mb-4">
 											<div class="card-header"><i class="fas fa-chart-area mr-1"></i>লিঙ্গ :</div>
 											<div class="card-body">
@@ -231,8 +231,8 @@
 
 										var data = google.visualization.arrayToDataTable([
 											['Gender', 'Number'],
-											['পুরুষ', parseInt(res.genders[0].confirmed)],
-											['মহিলা', parseInt(res.genders[1].confirmed)]
+											['পুরুষ', parseInt(res.genders['male'].confirmed)],
+											['মহিলা', parseInt(res.genders['female'].confirmed)]
 
 											]);
 

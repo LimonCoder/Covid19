@@ -50,6 +50,9 @@
 	color: white;
 }
 
+.genderwise{
+
+}
 
 
 @media only screen and (max-width: 360px) {
@@ -450,6 +453,15 @@
 }
 
 @media only screen and (min-width: 576px){
+
+	.main-header {
+		font-size: 19px;
+		font-weight: bold;
+		font-family: Times new roman;
+		margin-top: 4px;
+		margin-left: 103px;
+		padding-top: 1px;
+	}
 	.score {
 		margin-bottom: 12px;
 		margin-left: 166px;

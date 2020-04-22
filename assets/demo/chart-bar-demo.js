@@ -13,10 +13,6 @@ $(document).ready(function () {
         cache: 'false',
         success: function (res) {
 			
-			
-			
-
-       
             var myLineChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -25,7 +21,7 @@ $(document).ready(function () {
                         label: "আক্রান্ত",
                         backgroundColor: "rgba(2,117,216,1)",
                         borderColor: "rgba(2,117,216,1)",
-                        data: [parseInt(res.ages[0].confirmed), parseInt(res.ages[1].confirmed), parseInt(res.ages[2].confirmed), parseInt(res.ages[3].confirmed), parseInt(res.ages[4].confirmed), parseInt(res.ages[5].confirmed), parseInt(res.ages[6].confirmed)],
+                        data: [parseInt(res.ages['onetoten'].confirmed), parseInt(res.ages['eleventotwenty'].confirmed), parseInt(res.ages['twentyonetothirty'].confirmed), parseInt(res.ages['thirtyonetofourty'].confirmed), parseInt(res.ages['fourtyonetofifty'].confirmed), parseInt(res.ages['fiftyonetosixty'].confirmed), parseInt(res.ages['sixtyplus'].confirmed)],
                     }],
                 },
                 options: {
