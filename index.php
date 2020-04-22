@@ -51,7 +51,7 @@
 
 
 				</div>
-				<div class="col-md-12 clearfix p-5 " style="margin-left: 50px">
+				<div class="col-md-12 clearfix p-5 ">
 					<div class="row justify-content-center">
 						<div class="score col-lg-3  col-md-6"> 
 							<div><h2 class="infores text-white" id="Confrimed" ></h2>
@@ -98,7 +98,10 @@
 											id="totalRecovered"></span></span>
 											<span class="totalinfo">| মোট মৃ্ত্যু :<span
 												class="totalres"
-												id="totaldeaths"></span></span></div>
+												id="totaldeaths"></span></span>
+
+											</div>
+											<span class="source">সূত্র: আইইডিসিআর</span>
 											</div>
 										</div>
 									</div>

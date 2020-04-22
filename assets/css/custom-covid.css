@@ -45,6 +45,11 @@
 	padding: 2px;
 }
 
+.source{
+	font-family: SutonnyOMJ; 
+	color: white;
+}
+
 
 
 
@@ -52,7 +57,339 @@
 /*@media only screen and (min-width: 900px) {
 	
 }*/
-@media only screen and (max-width: 576px) {
+
+@media only screen and (max-width: 360px) {
+	h5{
+		padding-top: 5px;
+	}
+
+	.img-fluid {
+		max-width: 66%;
+	}
+
+	.main-header {
+		font-size: 16px;
+		font-weight: bold;
+		font-family: Times new roman;
+		margin-top: 4px;
+		margin-left: 17px;
+		padding-top: 1px;
+	}
+
+
+	.infohead {
+		font-family: SutonnyOMJ;
+		font-size: 22px;
+		border-bottom: 2px solid white;
+		padding-bottom: 2px;
+	}
+	.score {
+		margin-bottom: 12px;
+		margin-left: 52px;
+	}
+	.info {
+		font-family: SutonnyOMJ;
+		font-size: 18px;
+		padding: 10px 20px;
+	}
+	.info .a {
+		padding: 11px;
+	}
+
+
+	.infores {
+		font-family: SutonnyOMJ;
+		font-size: 29px;
+		margin-left: 37px;
+	}
+	.nomuna {
+		font-family: SutonnyOMJ;
+		font-size: 16px;
+		padding: 10px 20px;
+		margin-right: 4px;
+	}
+
+	.totalinfo {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-right: 3px;
+	}
+
+	.totalres {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-left: 2px;
+		padding: 2px;
+	}
+
+}
+@media only screen and (min-width: 375px) {
+	h5{
+		padding-top: 5px;
+	}
+
+	.img-fluid {
+		max-width: 66%;
+	}
+
+	.main-header {
+		font-size: 16px;
+		font-weight: bold;
+		font-family: Times new roman;
+		margin-top: 4px;
+		margin-left: 17px;
+		padding-top: 1px;
+	}
+
+
+	.infohead {
+		font-family: SutonnyOMJ;
+		font-size: 22px;
+		border-bottom: 2px solid white;
+		padding-bottom: 2px;
+	}
+	.score {
+		margin-bottom: 12px;
+		margin-left: 52px;
+	}
+	.info {
+		font-family: SutonnyOMJ;
+		font-size: 18px;
+		padding: 10px 20px;
+	}
+	.info .a {
+		padding: 11px;
+	}
+
+
+	.infores {
+		font-family: SutonnyOMJ;
+		font-size: 29px;
+		margin-left: 37px;
+	}
+	.nomuna {
+		font-family: SutonnyOMJ;
+		font-size: 16px;
+		padding: 10px 20px;
+		margin-right: 4px;
+	}
+
+	.totalinfo {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-right: 3px;
+	}
+
+	.totalres {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-left: 2px;
+		padding: 2px;
+	}
+
+}
+
+@media only screen and (min-width: 411px) {
+	h5{
+		padding-top: 5px;
+	}
+
+	.img-fluid {
+		max-width: 66%;
+	}
+
+	.main-header {
+		font-size: 16px;
+		font-weight: bold;
+		font-family: Times new roman;
+		margin-top: 4px;
+		margin-left: 17px;
+		padding-top: 1px;
+	}
+
+
+	.infohead {
+		font-family: SutonnyOMJ;
+		font-size: 22px;
+		border-bottom: 2px solid white;
+		padding-bottom: 2px;
+	}
+	.score {
+		margin-bottom: 12px;
+		margin-left: 77px;
+	}
+	.info {
+		font-family: SutonnyOMJ;
+		font-size: 18px;
+		padding: 10px 20px;
+	}
+	.info .a {
+		padding: 11px;
+	}
+
+
+	.infores {
+		font-family: SutonnyOMJ;
+		font-size: 29px;
+		margin-left: 37px;
+	}
+	.nomuna {
+		font-family: SutonnyOMJ;
+		font-size: 16px;
+		padding: 10px 20px;
+		margin-right: 4px;
+	}
+
+	.totalinfo {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-right: 3px;
+	}
+
+	.totalres {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-left: 2px;
+		padding: 2px;
+	}
+
+}
+
+@media only screen and (min-width: 412px) {
+	h5{
+		padding-top: 5px;
+	}
+
+	.img-fluid {
+		max-width: 66%;
+	}
+
+	.main-header {
+		font-size: 16px;
+		font-weight: bold;
+		font-family: Times new roman;
+		margin-top: 4px;
+		margin-left: 17px;
+		padding-top: 1px;
+	}
+
+
+	.infohead {
+		font-family: SutonnyOMJ;
+		font-size: 22px;
+		border-bottom: 2px solid white;
+		padding-bottom: 2px;
+	}
+	.score {
+		margin-bottom: 12px;
+		margin-left: 77px;
+	}
+	.info {
+		font-family: SutonnyOMJ;
+		font-size: 18px;
+		padding: 10px 20px;
+	}
+	.info .a {
+		padding: 11px;
+	}
+
+
+	.infores {
+		font-family: SutonnyOMJ;
+		font-size: 29px;
+		margin-left: 37px;
+	}
+	.nomuna {
+		font-family: SutonnyOMJ;
+		font-size: 16px;
+		padding: 10px 20px;
+		margin-right: 4px;
+	}
+
+	.totalinfo {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-right: 3px;
+	}
+
+	.totalres {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-left: 2px;
+		padding: 2px;
+	}
+
+}
+
+
+@media only screen and (min-width: 414px) {
+	h5{
+		padding-top: 5px;
+	}
+
+	.img-fluid {
+		max-width: 66%;
+	}
+
+	.main-header {
+		font-size: 16px;
+		font-weight: bold;
+		font-family: Times new roman;
+		margin-top: 4px;
+		margin-left: 17px;
+		padding-top: 1px;
+	}
+
+
+	.infohead {
+		font-family: SutonnyOMJ;
+		font-size: 22px;
+		border-bottom: 2px solid white;
+		padding-bottom: 2px;
+	}
+	.score {
+		margin-bottom: 12px;
+		margin-left: 77px;
+	}
+	.info {
+		font-family: SutonnyOMJ;
+		font-size: 18px;
+		padding: 10px 20px;
+	}
+	.info .a {
+		padding: 11px;
+	}
+
+
+	.infores {
+		font-family: SutonnyOMJ;
+		font-size: 29px;
+		margin-left: 37px;
+	}
+	.nomuna {
+		font-family: SutonnyOMJ;
+		font-size: 16px;
+		padding: 10px 20px;
+		margin-right: 4px;
+	}
+
+	.totalinfo {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-right: 3px;
+	}
+
+	.totalres {
+		font-family: SutonnyOMJ;
+		font-size: 15px;
+		margin-left: 2px;
+		padding: 2px;
+	}
+
+}
+
+
+/*@media only screen and (max-width: 576px) {
 	h5{
 		padding-top: 5px;
 	}
@@ -115,71 +452,7 @@
 	}
 
 }
-@media only screen and (min-width: 576px) {
-
-	h5{
-		padding-top: 5px;
-	}
-
-	.main-header {
-		font-size: 18px;
-		font-weight: bold;
-		font-family: Times new roman;
-		margin-top: 1px;
-		margin-left: 107px;
-		padding-top: 3px;
-	}
-
-	.img-fluid{
-		max-width: 35%;
-	}
-
-	.infohead{
-		font-family: SutonnyOMJ;
-		font-size: 25px;
-		border-bottom: 2px solid white;
-		padding-bottom: 2px
-	}
-	.score{
-		margin-bottom: 24px;
-		margin-left: 109px;
-	}
-	.info{
-		font-family: SutonnyOMJ;
-		font-size: 18px;
-		padding: 10px 20px;
-	}
-	.info .a {
-		padding: 13px;
-	}
-
-	.infores{
-		font-family: SutonnyOMJ; 
-		font-size: 27px;
-		margin-left: 37px; 
-	}
-
-	.nomuna {
-		font-family: SutonnyOMJ;
-		font-size: 18px;
-		padding: 10px 20px;
-		margin-right: 40px;
-	}
-
-	.totalinfo {
-		font-family: SutonnyOMJ;
-		font-size: 20px;
-		margin-right: 3px;
-	}
-
-	.totalres {
-		font-family: SutonnyOMJ;
-		font-size: 21px;
-		margin-left: 2px;
-		padding: 2px;
-	}
-
-}
+*/
 
 @media only screen and (min-width: 768px) { 
 
@@ -199,14 +472,14 @@
 	}
 	.score {
 		margin-bottom: 20px;
-		margin-left: 39px;
+		margin-left: 152px;
 	}
 
-	.infohead{
+	.infohead {
 		font-family: SutonnyOMJ;
-		font-size: 28px;
+		font-size: 30px;
 		border-bottom: 2px solid white;
-		padding-bottom: 2px
+		padding-bottom: 1px;
 	}
 
 	.infores {
@@ -221,11 +494,22 @@
 	.info .a {
 		padding: 16px;
 	}
+	.nomuna {
+		font-family: SutonnyOMJ;
+		font-size: 19px;
+		padding: 10px 20px;
+		margin-right: 4px;
+	}
+	.totalinfo {
+		font-family: SutonnyOMJ;
+		font-size: 23px;
+		margin-right: 3px;
+	}
 	.totalres {
 		font-family: SutonnyOMJ;
-		font-size: 21px;
-		margin-left: 2px;
-		padding: 2px;
+		font-size: 23px;
+		margin-left: 1px;
+		padding: 3px;
 	}
 
 
@@ -293,4 +577,64 @@
 
 }
 
+@media only screen and (min-width: 1280px) { 
 
+	h5{
+		padding-top: 5px;
+	}
+
+	.main-header {
+		font-size: 30px;
+		font-weight: bold;
+		font-family: Times new roman;
+		margin-top: 6px;
+		margin-left: 366px;
+		padding-top: 2px;
+	}
+
+	.img-fluid{
+		max-width: 35%;
+	}
+
+	.info{
+		font-family: SutonnyOMJ;
+		font-size: 37px;
+	}
+
+	.infohead{
+		font-family: SutonnyOMJ;
+		font-size: 40px;
+		border-bottom: 2px solid white;
+		padding-bottom: 2px
+	}
+	.infores{
+		font-family: SutonnyOMJ; 
+		font-size: 60px;
+		margin-left: 45px; 
+		line-height: 54px
+	}
+	.score{
+		margin-bottom: 28px; 
+		margin-left:55px;
+	}
+	.nomuna {
+		font-family: SutonnyOMJ;
+		font-size: 20px;
+		padding: 10px 60px;
+		margin-right: 6px;
+	}
+
+	.totalinfo {
+		font-family: SutonnyOMJ;
+		font-size: 30px;
+		margin-right: 4px;
+	}
+
+	.totalres {
+		font-family: SutonnyOMJ;
+		font-size: 32px;
+		margin-left: 5px;
+		padding: 2px;
+	}
+
+}
