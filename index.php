@@ -29,7 +29,7 @@
 		</div>
 
 		<div class="col">
-			<h4>Corona BD LIVE </h4>
+			<h4 class="main-header" >Corona BD LIVE </h4>
 		</div>
 	</nav>
 
@@ -53,16 +53,15 @@
 				</div>
 				<div class="col-md-12 clearfix p-5 " style="margin-left: 50px">
 					<div class="row justify-content-center">
-						<div class="score col-lg-3  col-md-6">
-							<div><h2 class="infores text-white " id="Confrimed"></h2>
+						<div class="score col-lg-3  col-md-6"> 
+							<div><h2 class="infores text-white" id="Confrimed" ></h2>
 							</div>
 							<div class="small"><span
-
 								class="info h4 bg-white text-danger">নতুন আক্রান্ত</span>
 							</div>
 						</div>
 						<div class="score col-lg-3 col-md-6">
-							<div><h2 class="infores text-white " id="Recovered"></h2>
+							<div><h2 class="infores text-white" id="Recovered" ></h2>
 							</div>
 							<div class="small"><span
 
@@ -121,7 +120,7 @@
 									<!------------------------------------------------------------ Start Age wise Chartbar -------------------------->
 									<div class="col-xl-6">
 										<div class="card mb-4">
-											<div class="card-header"><i class="fas fa-chart-bar mr-1"></i>বয়সের অনুপাত :</div>
+											<div class="card-header"><i class="fas fa-chart-bar mr-1"></i>বয়সের সমষ্টি :</div>
 											<div class="card-body">
 												<canvas id="myBarChart" width="100%" height="40"></canvas>
 											</div>
@@ -133,7 +132,7 @@
 
 								<!------------------------------------------------------------ Start District wise Confirmed  -------------------------->
 								<div class="card mb-4">
-									<div class="card-header"><i class="fas fa-table mr-1"></i> জেলাভিত্তিক ফলাফল :</div>
+									<div class="card-header"><i class="fas fa-table mr-1"></i> জেলা ভিত্তিক তথ্য :</div>
 									<div class="card-body">
 										<div class="table-responsive">
 											<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
@@ -229,8 +228,8 @@
 
 										var data = google.visualization.arrayToDataTable([
 											['Gender', 'Number'],
-											['পুরুষ', parseInt(res.genders.male)],
-											['মহিলা', parseInt(res.genders.female)]
+											['পুরুষ', parseInt(res.genders[0].confirmed)],
+											['মহিলা', parseInt(res.genders[1].confirmed)]
 
 											]);
 
@@ -257,14 +256,14 @@
 
 										});
 
-										$(res.today).each(function (index, value) {
-											$("#Confrimed").html((value.todayConfirmed).toString().replace(/[0123456789]/g, function (s) {
+										$(res.new).each(function (index, value) {
+											$("#Confrimed").html((value.confirmed).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
-											$("#Recovered").html((value.todayRecovered).toString().replace(/[0123456789]/g, function (s) {
+											$("#Recovered").html((value.recovered).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
-											$("#deaths").html((value.todayDeaths).toString().replace(/[0123456789]/g, function (s) {
+											$("#deaths").html((value.deaths).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
 

@@ -12,17 +12,20 @@ $(document).ready(function () {
         dataType: 'json',
         cache: 'false',
         success: function (res) {
+			
+			
+			
 
-            console.log(res);
+       
             var myLineChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ["১-১০", "১০-২০", "২০-৩০", "৩০-৪০", "৪০-৫০", "৫০-৬০", "৬০+"],
+                    labels: ["১-১০", "১০-২০", "২০-৩০", "৩০-৪০", "৪০-৫০", "৫০-৬০", "৬০++"],
                     datasets: [{
-                        label: "Revenue",
+                        label: "আক্রান্ত",
                         backgroundColor: "rgba(2,117,216,1)",
                         borderColor: "rgba(2,117,216,1)",
-                        data: [parseInt(res.ages.onetoten), parseInt(res.ages.tentotwenty), parseInt(res.ages.twentytothirty), parseInt(res.ages.thirtytoforty), parseInt(res.ages.fortytofifty), parseInt(res.ages.fiftytosixty), parseInt(res.ages.sixtyplus)],
+                        data: [parseInt(res.ages[0].confirmed), parseInt(res.ages[1].confirmed), parseInt(res.ages[2].confirmed), parseInt(res.ages[3].confirmed), parseInt(res.ages[4].confirmed), parseInt(res.ages[5].confirmed), parseInt(res.ages[6].confirmed)],
                     }],
                 },
                 options: {
@@ -41,8 +44,8 @@ $(document).ready(function () {
                         yAxes: [{
                             ticks: {
                                 min: 0,
-                                max: 160,
-                                maxTicksLimit: 20
+                                max: 25,
+                                maxTicksLimit: 5
                             },
                             gridLines: {
                                 display: true
@@ -50,7 +53,7 @@ $(document).ready(function () {
                         }],
                     },
                     legend: {
-                        display: false
+                        display: true
                     }
                 }
             });
