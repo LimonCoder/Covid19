@@ -454,6 +454,72 @@
 }
 */
 
+@media only screen and (min-width: 600px) {
+	h5{
+		padding-top: 5px;
+	}
+
+	.img-fluid {
+		max-width: 66%;
+	}
+
+	.main-header {
+		font-size: 20px;
+		font-weight: bold;
+		font-family: Times new roman;
+		margin-top: 4px;
+		margin-left: 103px;
+		padding-top: 2px;
+	}
+
+
+	.infohead {
+		font-family: SutonnyOMJ;
+		font-size: 22px;
+		border-bottom: 2px solid white;
+		padding-bottom: 2px;
+	}
+	.score {
+		margin-bottom: 12px;
+		margin-left: 171px;
+	}
+	.info {
+		font-family: SutonnyOMJ;
+		font-size: 18px;
+		padding: 10px 20px;
+	}
+	.info .a {
+		padding: 11px;
+	}
+
+
+	.infores {
+		font-family: SutonnyOMJ;
+		font-size: 29px;
+		margin-left: 37px;
+	}
+	.nomuna {
+		font-family: SutonnyOMJ;
+		font-size: 16px;
+		padding: 10px 20px;
+		margin-right: 4px;
+	}
+
+	.totalinfo {
+		font-family: SutonnyOMJ;
+		font-size: 20px;
+		margin-right: 3px;
+	}
+
+	.totalres {
+		font-family: SutonnyOMJ;
+		font-size: 20px;
+		margin-left: 2px;
+		padding: 2px;
+	}
+
+}
+
 @media only screen and (min-width: 768px) { 
 
 	h5{
