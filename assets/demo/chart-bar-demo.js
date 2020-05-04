@@ -4,15 +4,11 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 
 // Bar Chart Example
 var ctx = document.getElementById("myBarChart");
+
 $(document).ready(function () {
 
-    $.ajax({
-        url: 'https://www.fastaar.com/api',
-        type: 'get',
-        dataType: 'json',
-        cache: 'false',
-        success: function (res) {
-			
+    $.getJSON("https://corona.in.com.bd/api/ages", function(res){
+     
             var myLineChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -21,7 +17,7 @@ $(document).ready(function () {
                         label: "আক্রান্ত",
                         backgroundColor: "rgba(2,117,216,1)",
                         borderColor: "rgba(2,117,216,1)",
-                        data: [parseInt(res.ages['onetoten'].confirmed), parseInt(res.ages['eleventotwenty'].confirmed), parseInt(res.ages['twentyonetothirty'].confirmed), parseInt(res.ages['thirtyonetofourty'].confirmed), parseInt(res.ages['fourtyonetofifty'].confirmed), parseInt(res.ages['fiftyonetosixty'].confirmed), parseInt(res.ages['sixtyplus'].confirmed)],
+                        data: [parseInt(res.data.onetoten.confirmed), parseInt(res.data.eleventotwenty.confirmed), parseInt(res.data.twentyonetothirty.confirmed), parseInt(res.data.thirtyonetofourty.confirmed), parseInt(res.data.fourtyonetofifty.confirmed), parseInt(res.data.fiftyonetosixty.confirmed), parseInt(res.data.sixtyplus.confirmed)],
                     }],
                 },
                 options: {
@@ -53,10 +49,6 @@ $(document).ready(function () {
                     }
                 }
             });
-
-
-        }
-
     });
 
 })
