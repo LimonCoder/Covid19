@@ -109,7 +109,7 @@
 								<!------------------------------------------------------------ Live Secore Broad -------------------------->
 								<div class="row">
 									<!------------------------------------------------------------Start Gender wise piechart -------------------------->
-									<div class="col-xl-6">
+									<div class="genderwise col-xl-6">
 										<div class="card mb-4">
 											<div class="card-header"><i class="fas fa-chart-area mr-1"></i>লিঙ্গ :</div>
 											<div class="card-body">
@@ -143,6 +143,8 @@
 													<tr>
 														<th>জেলার নাম :</th>
 														<th>মোট আক্রান্ত</th>
+														<th>মোট সুস্থ</th>
+														<th>মোট মৃ্ত্যু</th>
 
 													</tr>
 												</thead>
@@ -210,101 +212,136 @@
 								7: '৭',
 								8: '৮',
 								9: '৯'
+									};
 
-
-							};
+							
 
 							google.charts.load('current', {'packages': ['corechart']});
 							google.charts.setOnLoadCallback(drawChart);
 
 							function drawChart() {
-								$.ajax({
-									url: 'https://www.fastaar.com/api',
-									type: 'get',
-									dataType: 'json',
-									cache: 'false',
-									success: function (res) {
-
-										$("#totaltest").html((res.new.tested).toString().replace(/[0123456789]/g, function (s) {
+										
+										
+										$.getJSON("https://corona.in.com.bd/api/stats", function(result){
+											// Today Tested Corona  //
+											$("#totaltest").html((result.last.tested).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
 
-										var data = google.visualization.arrayToDataTable([
-											['Gender', 'Number'],
-											['পুরুষ', parseInt(res.genders.male.confirmed)],
-											['মহিলা', parseInt(res.genders.female.confirmed)]
-
-											]);
-
-										var options = {
-											title: 'পুরুষ মহিলা গড় আক্রান্ত'
-										};
-
-										var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-										chart.draw(data, options);
-
-										$(res.total).each(function (index, value) {
-
-
-											$("#totalConfrimed").html((value.confirmed).toString().replace(/[0123456789]/g, function (s) {
+											//......................Total Record Corona....... //
+											$("#totalConfrimed").html((result.total.confirmed).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
 
-											$("#totalRecovered").html((value.recovered).toString().replace(/[0123456789]/g, function (s) {
+											$("#totalRecovered").html((result.total.recovered).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
-											$("#totaldeaths").html((value.deaths).toString().replace(/[0123456789]/g, function (s) {
+											$("#totaldeaths").html((result.total.deaths).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
 
+
+											// Last Record Corona 	 //
+											$("#Confrimed").html((result.last.confirmed).toString().replace(/[0123456789]/g, function (s) {
+												return banglaDigits[s];
+											}));
+											$("#Recovered").html((result.last.recovered).toString().replace(/[0123456789]/g, function (s) {
+												return banglaDigits[s];
+											}));
+											$("#deaths").html((result.last.deaths).toString().replace(/[0123456789]/g, function (s) {
+												return banglaDigits[s];
+											}));
+
+
+											
 										});
 
-										$(res.new).each(function (index, value) {
-											$("#Confrimed").html((value.confirmed).toString().replace(/[0123456789]/g, function (s) {
-												return banglaDigits[s];
-											}));
-											$("#Recovered").html((value.recovered).toString().replace(/[0123456789]/g, function (s) {
-												return banglaDigits[s];
-											}));
-											$("#deaths").html((value.deaths).toString().replace(/[0123456789]/g, function (s) {
-												return banglaDigits[s];
-											}));
+										// Genderwise Pie Chart //
+										$.getJSON("https://corona.in.com.bd/api/genders", function(result){
 
+										
+
+											var data = google.visualization.arrayToDataTable([
+												['Gender', 'Number'],
+												['পুরুষ', parseInt(result.data.male.confirmed)],
+												['মহিলা', parseInt(result.data.female.confirmed)]
+
+												]);
+
+											var options = {
+												title: 'পুরুষ মহিলা গড় আক্রান্ত'
+											};
+
+											var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+											chart.draw(data, options);
+											
 										});
+
+										$.getJSON("https://corona.in.com.bd/api/genders", function(result){
+
+										
+
+											var data = google.visualization.arrayToDataTable([
+												['Gender', 'Number'],
+												['পুরুষ', parseInt(result.data.male.confirmed)],
+												['মহিলা', parseInt(result.data.female.confirmed)]
+
+												]);
+
+											var options = {
+												title: 'পুরুষ মহিলা গড় আক্রান্ত'
+											};
+
+											var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+											chart.draw(data, options);
+											
+										});
+										
+									
 
 
 
 									}
 
-								});
-							}
-
-							$.getJSON("https://www.fastaar.com/api", function(res){
-
-								$.each(res.districts, function(index,value){
-									var tr = `
-									<tr>
-									<td>${value.bnname}</td>
-									<td>${(value.confirmed).toString().replace(/[0123456789]/g, function (s) {
-										return banglaDigits[s];
-									})}</td>
-									</tr>
-									`;
-
-									$('tbody').append(tr);
-
-
-								})
-
-								$("#dataTable").DataTable({
-
-								});
-							});
+									$.getJSON("https://corona.in.com.bd/api/districts", function(res){
 
 
 
+										$.each(res.data, function(index,value){
+											var tr = `
+											<tr>
+											<td>${value.bnname}</td>
+											<td>${(value.confirmed).toString().replace(/[0123456789]/g, function (s) {
+												return banglaDigits[s];
+											})}</td>
+											<td>${(value.recovered).toString().replace(/[0123456789]/g, function (s) {
+												return banglaDigits[s];
+											})}</td>
+											<td>${(value.deaths).toString().replace(/[0123456789]/g, function (s) {
+												return banglaDigits[s];
+											})}</td>
+											</tr>
+											`;
 
-						});
+											$('tbody').append(tr);
+
+
+										})
+
+										$("#dataTable").DataTable({
+
+										});
+									});
+
+
+								
+							})
+
+							
+
+
+
+						
 
 
 
