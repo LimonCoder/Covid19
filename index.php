@@ -231,8 +231,8 @@
 
 										var data = google.visualization.arrayToDataTable([
 											['Gender', 'Number'],
-											['পুরুষ', parseInt(res.genders[0].confirmed)],
-											['মহিলা', parseInt(res.genders[1].confirmed)]
+											['পুরুষ', parseInt(res.genders.male.confirmed)],
+											['মহিলা', parseInt(res.genders.female.confirmed)]
 
 											]);
 
