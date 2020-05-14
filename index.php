@@ -1,3 +1,32 @@
+<?php 
+
+$json =  file_get_contents("https://corona.in.com.bd/api/stats");
+
+$info = json_decode($json,true);
+
+$englishdate = $info['lastUpdate'];
+
+
+
+$search_array= array("Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", ":", ","); 
+$replace_array= array("শনিবার","রবিবার","সোমবার","মঙ্গলবার","বুধবার","বৃহস্পতিবার","শুক্রবার","১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯", "০", "জানুয়ারী", "ফেব্রুয়ারী", "মার্চ", "এপ্রিল", "মে", "জুন", "জুলাই", "আগষ্ট", "সেপ্টেম্বার", "অক্টোবার", "নভেম্বার", "ডিসেম্বার", ":", ",");
+
+// convert all English char to Bangla char 
+$bangladate = str_replace($search_array, $replace_array, $englishdate);   
+
+$data = explode(" ", $bangladate);
+array_splice($data,4,1);
+$data[1] = $data[1]. 'ই';
+$fixeddata = implode(" ", $data);
+
+
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +74,12 @@
 							<h5><span class="infohead h4 text-white"
 								>করোনা ভাইরাস বাংলাদেশ আপডেট</span>
 							</h5>
+
+						</div>
+						<div class="col-sm-12 text-center  col-md-12 text-center">
+							<p class="load lastdate"><span class="text-white"
+								>সর্বশেষ আপডেট : <span><?=$fixeddata?></span></span>
+							</p>
 
 						</div>
 					</div>
@@ -133,7 +168,7 @@
 								</div>
 
 
-								<!------------------------------------------------------------ Start District wise Confirmed  -------------------------->
+<!----------------------------------- Start District wise Confirmed  -------------------------->
 								<div class="card mb-4">
 									<div class="card-header"><i class="fas fa-table mr-1"></i> জেলা ভিত্তিক তথ্য :</div>
 									<div class="card-body">
@@ -170,7 +205,7 @@
 										</div>
 									</footer>
 								</div>
-								<!------------------------------------------------------------ End District wise Confirmed  -------------------------->
+<!------------------------------------- End District wise Confirmed -------------->
 							</div>
 
 
@@ -223,7 +258,8 @@
 										
 										
 										$.getJSON("https://corona.in.com.bd/api/stats", function(result){
-											// Today Tested Corona  //
+
+											// Today Tested record Corona  //
 											$("#totaltest").html((result.last.tested).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
@@ -241,6 +277,7 @@
 											}));
 
 
+
 											// Last Record Corona 	 //
 											$("#Confrimed").html((result.last.confirmed).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
@@ -255,6 +292,8 @@
 
 											
 										});
+
+
 
 										// Genderwise Pie Chart //
 										$.getJSON("https://corona.in.com.bd/api/genders", function(result){
@@ -303,6 +342,9 @@
 
 									}
 
+
+
+									// District wise record //
 									$.getJSON("https://corona.in.com.bd/api/districts", function(res){
 
 
@@ -329,6 +371,24 @@
 										})
 
 										$("#dataTable").DataTable({
+
+											"language": {
+												"sProcessing":   "প্রসেসিং হচ্ছে...",
+												"sLengthMenu":   "_MENU_ টা এন্ট্রি দেখাও",
+												"sZeroRecords":  "আপনি যা অনুসন্ধান করেছেন তার সাথে মিলে যাওয়া কোন রেকর্ড খুঁজে পাওয়া যায় নাই",
+												"sInfo":         "_TOTAL_ টা এন্ট্রির মধ্যে _START_ থেকে _END_ পর্যন্ত দেখানো হচ্ছে",
+												"sInfoEmpty":    "কোন এন্ট্রি খুঁজে পাওয়া যায় নাই",
+												"sInfoFiltered": "(মোট _MAX_ টা এন্ট্রির মধ্যে থেকে বাছাইকৃত)",
+												"sInfoPostFix":  "",
+												"sSearch":       "অনুসন্ধান:",
+												"sUrl":          "",
+												"oPaginate": {
+													"sFirst":    "প্রথমটা",
+													"sPrevious": "আগেরটা",
+													"sNext":     "পরবর্তীটা",
+													"sLast":     "শেষেরটা"
+												}
+											}
 
 										});
 									});

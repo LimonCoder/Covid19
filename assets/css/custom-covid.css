@@ -7,6 +7,12 @@
 	border-bottom: 2px solid white;
 	padding-bottom: 2px
 }
+.lastdate{
+	font-family: SutonnyOMJ;
+	font-size: 16px;
+	padding: 2px
+}
+
 
 .score{
 	margin-bottom: 28px; 
@@ -74,9 +80,14 @@
 
 	.infohead {
 		font-family: SutonnyOMJ;
-		font-size: 16px;
+		font-size: 15px;
 		border-bottom: 2px solid white;
 		padding-bottom: 2px;
+	}
+	.lastdate{
+		font-family: SutonnyOMJ;
+		font-size: 10px;
+		padding: 2px
 	}
 	.score {
 		margin-bottom: 12px;
@@ -140,9 +151,14 @@
 
 	.infohead {
 		font-family: SutonnyOMJ;
-		font-size: 22px;
+		font-size: 15px;
 		border-bottom: 2px solid white;
 		padding-bottom: 2px;
+	}
+	.lastdate{
+		font-family: SutonnyOMJ;
+		font-size: 10px;
+		padding: 2px
 	}
 	.score {
 		margin-bottom: 12px;
@@ -206,9 +222,14 @@
 
 	.infohead {
 		font-family: SutonnyOMJ;
-		font-size: 16px;
+		font-size: 15px;
 		border-bottom: 2px solid white;
 		padding-bottom: 2px;
+	}
+	.lastdate{
+		font-family: SutonnyOMJ;
+		font-size: 10px;
+		padding: 2px
 	}
 	.score {
 		margin-bottom: 12px;
@@ -499,6 +520,11 @@
 		border-bottom: 2px solid white;
 		padding-bottom: 2px;
 	}
+	.lastdate{
+		font-family: SutonnyOMJ;
+		font-size: 13px;
+		padding: 2px
+	}
 	.score {
 		margin-bottom: 12px;
 		margin-left: 171px;
@@ -692,6 +718,11 @@
 		font-size: 40px;
 		border-bottom: 2px solid white;
 		padding-bottom: 2px
+	}
+	.lastdate{
+		font-family: SutonnyOMJ;
+		font-size: 20px;
+		padding: 2px
 	}
 	.infores{
 		font-family: SutonnyOMJ; 
