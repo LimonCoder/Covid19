@@ -144,8 +144,9 @@
 		font-weight: bold;
 		font-family: Times new roman;
 		margin-top: 4px;
-		margin-left: 17px;
+		/* margin-left: 17px; */
 		padding-top: 1px;
+		text-align: right;
 	}
 
 
@@ -217,6 +218,7 @@
 		margin-top: 4px;
 		margin-left: 32px;
 		padding-top: 1px;
+		text-align: right;
 	}
 
 
@@ -286,8 +288,9 @@
 		font-weight: bold;
 		font-family: Times new roman;
 		margin-top: 4px;
-		margin-left: 17px;
+		/* margin-left: 17px; */
 		padding-top: 1px;
+		text-align: right;
 	}
 
 
@@ -354,6 +357,7 @@
 		margin-top: 4px;
 		margin-left: 52px;
 		padding-top: 1px;
+		text-align: right;
 	}
 
 
@@ -509,8 +513,9 @@
 		font-weight: bold;
 		font-family: Times new roman;
 		margin-top: 4px;
-		margin-left: 103px;
+		/* margin-left: 103px; */
 		padding-top: 2px;
+		text-align: right;
 	}
 
 
@@ -576,8 +581,9 @@
 		font-weight: bold;
 		font-family: Times new roman;
 		margin-top: 1px;
-		margin-left: 160px;
+		/* margin-left: 160px; */
 		padding-top: 2px;
+		text-align: right;
 	}
 	.img-fluid{
 		max-width: 35%;
@@ -638,8 +644,9 @@
 		font-weight: bold;
 		font-family: Times new roman;
 		margin-top: 6px;
-		margin-left: 220px;
+		/* margin-left: 220px; */
 		padding-top: 2px;
+		text-align: right;
 	}
 
 	.img-fluid{
@@ -700,8 +707,9 @@
 		font-weight: bold;
 		font-family: Times new roman;
 		margin-top: 6px;
-		margin-left: 366px;
+		/* margin-left: 366px; */
 		padding-top: 2px;
+		text-align: right;
 	}
 
 	.img-fluid{
