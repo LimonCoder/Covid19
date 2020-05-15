@@ -144,7 +144,7 @@
                                 <footer class="py-4 bg-light mt-auto">
                                     <div class="container-fluid">
                                         <div class="d-flex align-items-center justify-content-between small">
-                                            <div class="text-muted">Devoloped By <a href="https://web.facebook.com/Limon369949/" target="_blank">Nurul Amin Limon</a></div>
+                                            <div class="text-muted">Devoloped By <a href="https://web.facebook.com/Limon369949/" target="_blank"> Limon</a></div>
                                             <div class="text-muted">Last Upadate : <span id="lastupdate"></span> </div>
                                             <div>
                                                 <span>Technical Support :</span>
