@@ -89,14 +89,14 @@ $fixeddata = implode(" ", $data);
 				<div class="col-md-12 clearfix p-5 ">
 					<div class="row justify-content-center">
 						<div class="score col-lg-3  col-md-6"> 
-							<div><h2 class="infores text-white" id="Confrimed" ></h2>
+							<div><h2 class=" infores text-white" id="Confrimed" ></h2>
 							</div>
 							<div class="small"><span
 								class="info h4 bg-white text-danger">নতুন আক্রান্ত</span>
 							</div>
 						</div>
 						<div class="score col-lg-3 col-md-6">
-							<div><h2 class="infores text-white" id="Recovered" ></h2>
+							<div><h2 class=" infores text-white" id="Recovered" ></h2>
 							</div>
 							<div class="small"><span
 
@@ -104,7 +104,7 @@ $fixeddata = implode(" ", $data);
 							</div>
 						</div>
 						<div class="score col-lg-3 col-md-6">
-							<div><h2 class="infores text-white" id="deaths"></h2>
+							<div><h2 class=" infores text-white" id="deaths"></h2>
 							</div>
 							<div class="small"><span class="info h4 bg-white text-danger"><span class="a" >নতুন মৃ্ত্যু</span></span>
 							</div>
@@ -180,6 +180,7 @@ $fixeddata = implode(" ", $data);
 														<th>মোট আক্রান্ত</th>
 														<th>মোট সুস্থ</th>
 														<th>মোট মৃ্ত্যু</th>
+                                                       <th>জেলা আক্রান্তের হার</th>
 
 													</tr>
 												</thead>
@@ -210,8 +211,7 @@ $fixeddata = implode(" ", $data);
 
 
 						</div>
-
-						<script src="assets/js/jquery-3.3.1.js" crossorigin="anonymous"></script>
+                        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 						<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
 						crossorigin="anonymous"></script>
@@ -228,13 +228,22 @@ $fixeddata = implode(" ", $data);
 						<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 						<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
+
 					</body>
 					</html>
 
 					<script type="text/javascript">
 
 
+
 						$(document).ready(function () {
+
+
+
+
+
+
+
 
 							var banglaDigits = {
 								0: '০',
@@ -265,7 +274,8 @@ $fixeddata = implode(" ", $data);
 											}));
 
 											//......................Total Record Corona....... //
-											$("#totalConfrimed").html((result.total.confirmed).toString().replace(/[0123456789]/g, function (s) {
+
+                                                $("#totalConfrimed").html((result.total.confirmed).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											}));
 
@@ -343,6 +353,9 @@ $fixeddata = implode(" ", $data);
 									}
 
 
+                            $.getJSON("https://corona.in.com.bd/api/stats", function(result) {
+
+
 
 									// District wise record //
 									$.getJSON("https://corona.in.com.bd/api/districts", function(res){
@@ -350,6 +363,7 @@ $fixeddata = implode(" ", $data);
 
 
 										$.each(res.data, function(index,value){
+
 											var tr = `
 											<tr>
 											<td>${value.bnname}</td>
@@ -362,6 +376,9 @@ $fixeddata = implode(" ", $data);
 											<td>${(value.deaths).toString().replace(/[0123456789]/g, function (s) {
 												return banglaDigits[s];
 											})}</td>
+                                            <td>${(((value.confirmed * 100) / result.total.confirmed).toFixed(2)).toString().replace(/[0123456789]/g, function (s) {
+                                                return banglaDigits[s];
+                                            })}%</td>
 											</tr>
 											`;
 
@@ -393,6 +410,8 @@ $fixeddata = implode(" ", $data);
 										});
 									});
 
+                            });
+
 
 								
 							})
@@ -406,4 +425,5 @@ $fixeddata = implode(" ", $data);
 
 
 					</script>
+
 
