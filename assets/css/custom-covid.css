@@ -55,7 +55,10 @@
 	font-family: SutonnyOMJ; 
 	color: white;
 }
-
+.coronaimg{
+	width: 50px;
+	height: 50px;
+}
 
 
 
@@ -66,6 +69,10 @@
 
 	.img-fluid {
 		max-width: 66%;
+	}
+	.coronaimg {
+		width: 18px;
+		height: 18px;
 	}
 
 	.main-header {
@@ -282,6 +289,10 @@
 	.img-fluid {
 		max-width: 66%;
 	}
+	.coronaimg {
+		width: 20px;
+		height: 20px;
+	}
 
 	.main-header {
 		font-size: 16px;
@@ -349,6 +360,10 @@
 	.img-fluid {
 		max-width: 66%;
 	}
+	.coronaimg {
+		width: 23px;
+		height: 23px;
+	}
 
 	.main-header {
 		font-size: 14px;
@@ -412,6 +427,10 @@
 @media only screen and (min-width: 414px) {
 	h5{
 		padding-top: 5px;
+	}
+	.coronaimg {
+		width: 20px;
+		height: 20px;
 	}
 
 	.img-fluid {
@@ -477,6 +496,10 @@
 
 @media only screen and (min-width: 576px){
 
+	.coronaimg {
+		width: 28px;
+		height: 28px;
+	}
 	.main-header {
 		font-size: 16px;
 		font-weight: bold;
@@ -506,6 +529,10 @@
 
 	.img-fluid {
 		max-width: 66%;
+	}
+	.coronaimg {
+		width: 28px;
+		height: 28px;
 	}
 
 	.main-header {
@@ -571,8 +598,11 @@
 
 }
 
-@media only screen and (min-width: 768px) { 
-
+@media only screen and (min-width: 768px) {
+	.coronaimg {
+		width: 50px;
+		height: 50px;
+	}
 	h5{
 		padding-top: 5px;
 	}
@@ -638,6 +668,10 @@
 	h5{
 		padding-top: 5px;
 	}
+	.coronaimg {
+		width: 50px;
+		height: 50px;
+	}
 
 	.main-header {
 		font-size: 28px;
@@ -696,8 +730,11 @@
 
 }
 
-@media only screen and (min-width: 1280px) { 
-
+@media only screen and (min-width: 1280px) {
+	.coronaimg {
+		width: 50px;
+		height: 50px;
+	}
 	h5{
 		padding-top: 5px;
 	}

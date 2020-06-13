@@ -46,13 +46,26 @@ $fixeddata = implode(" ", $data);
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
 	crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        .coronaimg{
+            animation-name: example;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
 
+        @keyframes example{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 
 </head>
 <body class="sb-nav-fixed">
 	<nav class="navbar navbar-expand-lg navbar-light bg-success sticky-top" style="color: white">
 
 		<div class="col">
+            <img src="assets/img/covid19.png"  class="coronaimg" />
 			<img src="assets/img/Innovationit-logo.png" class="img-fluid img-responsive"
 			sizes="(max-width: 200px) 100vw, 800px"/>
 		</div>

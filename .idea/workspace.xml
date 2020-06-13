@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a5463cb-d410-4c35-9790-15092ad87d8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/custom-covid.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/custom-covid.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -11,9 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,7 +21,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -45,12 +43,13 @@
       <workItem from="1587103846561" duration="1247000" />
       <workItem from="1587116597723" duration="12784000" />
       <workItem from="1587185941930" duration="5449000" />
-      <workItem from="1591276633018" duration="8260000" />
+      <workItem from="1591276633018" duration="9289000" />
+      <workItem from="1592063419210" duration="2274000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1591276713476">
